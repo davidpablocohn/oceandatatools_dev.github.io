@@ -4,50 +4,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website for the OceanDataTools suite of data acquisition/management tools">
-    <meta name="author" content="Webb Pinner, David Pablo Cohn">
+    <meta name="author" content="David Pablo Cohn, Webb Pinner">
     <title>OceanDataTools.github.io</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
-    <!-- <link rel="stylesheet" type="text/css" href="./css/custom.css"/> -->
+    <link rel="stylesheet" type="text/css" href="./css/custom.css"/>
   </head>
   <body>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
           <a title="Ulisse Perusin, GPLv2 &lt;https://commons.wikimedia.org/wiki/File:Nautilus_icon.svg&gt;, via Wikimedia Commons" ><img width="48" alt="Nautilus icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/48px-Nautilus_icon.svg.png"></a>
-          <span class="fs-4">OceanDataTools.org</span>
+          <span class="fs-4">OceanDataTools</span>
         </a>
       </header>
 
       <main>
-        <h1>Let's start collecting data!</h1>
-        <p class="fs-5 col-md-8">OceanDataTool.org provides a suite of tools for collecting and managing data collected by Research Vessels as well as manned, remotely operated and autonomously operated vehicles.</p>
+        <h1>Ok data, let's dance!</h1>
+        <p class="fs-5 col-md-8">OceanDataTools provides a suite of open-source tools for collecting and managing data created aboard oceanographic research vessels as well as manned, remotely operated and autonomously operated vehicles.</p>
 
         <div class="mb-5">
-          <a href="../examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+          <a href="https://github.com/OceanDataTools" class="btn btn-primary btn-lg px-4">To The Repos <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+          </svg></a>
         </div>
 
         <hr class="col-3 col-md-2 mb-5">
 
-        <div class="row g-5">
-          <div class="col-md-6">
-            <h2>Starter projects</h2>
-            <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+        <div class="row g-5 mb-5">
+          <div class="col-md-4">
+            <h2>OpenRVDAS</h2>
+            <p>A modular platform for developing custom data acquisition systems to support vessels or vehicles.</p>
             <ul class="icon-list">
-              <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm starter</a></li>
-              <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
+              <li>Capture data from serial / network / file</li>
+              <li>Modify, filter, parse data strings</li>
+              <li>Write data to file, network and/or database</li>
+              <li>Integration with InfluxDB / Grafana for rich web-based realtime dashboards</li>
+              <li>Easily add custom readers transforms and writers</li>
             </ul>
           </div>
 
-          <div class="col-md-6">
-            <h2>Guides</h2>
-            <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+          <div class="col-md-4">
+            <h2>OpenVDM</h2>
+            <p>A flexible vessel-wide data managment system for organizing files from data acquistion systems</p>
             <ul class="icon-list">
-              <li><a href="../getting-started/introduction/">Bootstrap quick start guide</a></li>
-              <li><a href="../getting-started/webpack/">Bootstrap Webpack guide</a></li>
-              <li><a href="../getting-started/parcel/">Bootstrap Parcel guide</a></li>
-              <li><a href="../getting-started/build-tools/">Contributing to Bootstrap</a></li>
+              <li>Organize data consistently</li>
+              <li>Provide safe and immediate access to data</li>
+              <li>Enforce directory and file naming standards</li>
+              <li>Notify technicians when there are problems</li>
+              <li>Automated backups of data for clients</li>
             </ul>
           </div>
+
+          <div class="col-md-4">
+            <h2>Sealog</h2>
+            <p>A modular platform for building custom event-logging solutions to support vessels or vehicles.</p>
+            <ul class="icon-list">
+              <li>Easily capture scientific and operational events</li>
+              <li>Query/Export events by cruise, dive or with custom parameters </li>
+              <li>Integrate with 3rd-party systems like GPS, USBL and frame capture systems</li>
+              <li>RestFUL API for developing reports and custom data products</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row g-5">
+          <h2 class="text-center">Current Users</h2>
         </div>
 
         <div class="row mx-auto my-auto justify-content-center">
@@ -55,62 +75,62 @@
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 1</div>
-                  </div>
+                  <img src="./img/GSO_Logo.png" class="img-fluid">
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 2</div>
-                  </div>
+                  <img class="text-center" src="./img/UH_Logo.png" class="img-fluid">
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 3</div>
-                  </div>
+                  <img class="text-center" src="./img/StonyBrook_Logo.png" class="img-fluid">
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 4</div>
-                  </div>
+                  <img class="text-center" src="./img/SOI_Logo.png" class="img-fluid">
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 5</div>
-                  </div>
+                  <img class="text-center" src="./img/Oceef_Logo.png" class="img-fluid">
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nautilus_icon.svg/64px-Nautilus_icon.svg.png" class="img-fluid">
-                    </div>
-                    <div class="card-img-overlay">Slide 6</div>
-                  </div>
+                  <img class="text-center" src="./img/OceanX_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/OET_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/BIOS_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/WHOI_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/USAP_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/Saildrone_Logo.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <img class="text-center" src="./img/AAP_Logo.png" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -128,6 +148,6 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<!--     <script src="./js/custom.js"/>
- -->  </body>
+    <script src="./js/custom.js"></script>
+  </body>
 </html>
