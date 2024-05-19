@@ -1,4 +1,4 @@
-# OpenRVDAS Tutorial and Quickstart
+ OpenRVDAS Tutorial and Quickstart
 © 2018-2024 David Pablo Cohn - DRAFT 2024-05-016
 
 ## Table of Contents
@@ -99,22 +99,22 @@ license: 2024-05-07T02:35:07.948601Z in the Software without restriction, includ
 
 4. Loggers can read from more than one place, by having more than one __reader__, and can write to more than one place, by having more than one __writer__. The following variation reads from the `LICENSE` file as before and echos it to stdout. But it adds a second writer that also writes it via UDP to the local network on port 6221:
 ```buildoutcfg
-# Read the LICENSE file as plain text
+\# Read the LICENSE file as plain text
 readers:
 - class: TextFileReader
   kwargs:  # initialization kwargs
     file_spec: LICENSE
     interval: 0.2  # seconds per record, for demo purposes
 
-# Two transforms that will be executed sequentially
+\# Two transforms that will be executed sequentially
 transforms:
 - class: TimestampTransform  # has no kwargs
 - class: PrefixTransform
   kwargs:
     prefix: "license:"
 
-# Write back out as text file. When no filename is given as
-# a keyword argument, TextFileWriter writes to stdout.
+\# Write back out as text file. When no filename is given as
+\# a keyword argument, TextFileWriter writes to stdout.
 writers:
 - class: TextFileWriter
 - class: UDPWriter
