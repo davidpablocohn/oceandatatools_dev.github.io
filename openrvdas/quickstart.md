@@ -288,12 +288,4 @@ If you only have one or two sensors you intend to log, and wish them to be "alwa
 
 But most practical deployments have a dozen or more sensors/data sources and need to vary what is done with the data of each depending on the ship's location and operational status. The ability to monitor the state of each logger is also essential.
 
-For situations like this, you will want to go ahead and perform a full installation of OpenRVDAS so that you can use its full functionality and the built-in Django-based GUI.
-
-using the `utils/install_openrvdas.sh` script. The script is fairly self-explanatory
-
-: you always want to relay certain data to ship displays, but only relay other data when underway. And you only want to save certain data only when operating outside of an EEZ.
-
-OpenRVDAS uses a dedicated server script called the "logger manager (in `server/logger_manager.py`) to manage these tasks. It supports both a command line and browser-based interface to do this.
-
-Please refer to the ["Controlling Loggers" document](controlling_loggers.md) for details on running the logger manager. Note that while some of its functionality may be available within the scope of this "quickstart" document, at this point you will be much better off performing a full installation as per the [INSTALL.md document](INSTALL.md), and proceeding from there. 
+For situations like this, you will want to go ahead and perform a full installation of OpenRVDAS so that you can use its full functionality and the built-in Django-based GUI. Please refer to the [OpenRVDAS GUI Quickstart document[quickstart_gui.md] for an introduction and installation instructions.
