@@ -98,6 +98,7 @@ license: 2024-05-07T02:35:07.948601Z in the Software without restriction, includ
 ### Your second logger
 
 4. Loggers can read from more than one place, by having more than one __reader__, and can write to more than one place, by having more than one __writer__. The following variation reads from the `LICENSE` file as before and echos it to stdout. But it adds a second writer that also writes it via UDP to the local network on port 6221:
+
 ```buildoutcfg
 \# Read the LICENSE file as plain text
 readers:
