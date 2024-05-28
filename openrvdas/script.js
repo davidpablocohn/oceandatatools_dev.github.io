@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load chapter content
     function loadChapter(file) {
-        console.log("Loading file '" + file + "'")
+        console.log("Loading file '" + file + "'");
         file = file.replace(/\.md$/, '.html');
-        console.log("Really file '" + file + "'")
+        console.log("Really file '" + file + "'");
         fetch(file)
             .then((response) => response.text())
             .then((text) => {
