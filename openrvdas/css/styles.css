@@ -1,16 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .sidebar {
-  width: 20%;
-  background-color: #f4f4f4;
-  padding: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 200px;
 }
 
-.main-pane {
-  width: 80%;
-  padding: 10px;
+.sidebar h2 {
+  margin-top: 0;
 }
 
 .sidebar ul {
@@ -18,16 +24,30 @@
   padding: 0;
 }
 
-.sidebar ul li {
-  padding: 5px 0;
+.sidebar li {
+  margin-bottom: 10px;
 }
 
-.sidebar ul li a {
+.sidebar a {
+  color: #333;
   text-decoration: none;
-  color: black;
 }
 
-.sidebar ul li a.active {
+.sidebar a.active {
   font-weight: bold;
   font-style: italic;
+}
+
+.main-pane {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.main-pane a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.main-pane a:hover {
+  text-decoration: underline;
 }

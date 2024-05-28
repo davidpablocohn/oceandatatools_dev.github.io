@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markdown Viewer</title>
+  <title>Markdown File Index</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Define marked as a global variable
+    window.marked = window.marked || marked;
+  </script>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
-      <ul id="fileList">
-        <!-- File links will be added here by JavaScript -->
-      </ul>
+      <h2>Index</h2>
+      <ul id="sidebar-list"></ul>
     </div>
-    <div class="main-pane" id="mainPane">
-      <!-- Markdown content will be rendered here -->
-    </div>
+    <div class="main-pane" id="main-pane"></div>
   </div>
-  <script src="js/script.js"></script>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
