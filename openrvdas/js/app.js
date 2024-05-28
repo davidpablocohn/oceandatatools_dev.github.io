@@ -1,5 +1,10 @@
 // Fetch and parse markdown files
-const markdownFiles = ['quickstart.md', 'quickstart_gui.md', 'intro_to_loggers.md'];
+const markdownFiles = [
+  'quickstart.md',
+  'quickstart_gui.md',
+  'intro_to_loggers.md',
+  'cached_data_server.md',
+  'controlling_loggers.md'];
 const parsedFiles = {};
 
 markdownFiles.forEach(file => {
