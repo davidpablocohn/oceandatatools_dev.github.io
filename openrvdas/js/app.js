@@ -11,7 +11,7 @@ markdownFiles.forEach(file => {
   fetch('md/' + file)
     .then(response => response.text())
     .then(content => {
-      parsedFiles[file] = marked(content);
+      parsedFiles[file] = window.marked(content);
       populateSidebar(file);
     });
 });
