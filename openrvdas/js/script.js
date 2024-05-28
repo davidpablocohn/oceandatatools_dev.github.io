@@ -3,15 +3,15 @@ const markdownFiles = ['quickstart.md', 'quickstart_gui.md', 'intro_to_loggers.m
 
 // Function to load a Markdown file and display its content
 function loadMarkdown(file) {
-  console.log('Loading MD file ' + file)
   fetch(file)
     .then(response => response.text())
     .then(markdown => {
-      const htmlContent = marked(markdown);
+      const htmlContent = marked.parse(markdown); // Use marked.parse() instead of marked()
       document.getElementById('mainPane').innerHTML = htmlContent;
       updateSidebar(file);
       addLinkListeners();
-    });
+    })
+    .catch(error => console.error('Error loading markdown file:', error));
 }
 
 // Function to update the sidebar
