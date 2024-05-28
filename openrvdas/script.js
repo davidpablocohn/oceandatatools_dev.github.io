@@ -1,11 +1,14 @@
+// Import the marked library
+const marked = require('marked');
+
 document.addEventListener("DOMContentLoaded", function () {
     const toc = document.getElementById("toc");
     const chapterContent = document.getElementById("chapter-content");
 
     const chapters = [
-        { title: "Quickstart", file: "./quickstart.html" },
-        { title: "GUI Quickstart", file: "./quickstart_gui.html" },
-        { title: "Introduction to Loggers", file: "./intro_to_loggers.html" },
+        { title: "Quickstart", file: "quickstart.md" },
+        { title: "GUI Quickstart", file: "quickstart_gui.md" },
+        { title: "Introduction to Loggers", file: "intro_to_loggers.md" },
         // Add more chapters as needed
     ];
 
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load chapter content
     function loadChapter(file) {
+        console.log("Loading file '" + file + "'")
         fetch(file)
             .then((response) => response.text())
             .then((text) => {
