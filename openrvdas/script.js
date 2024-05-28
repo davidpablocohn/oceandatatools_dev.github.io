@@ -1,6 +1,3 @@
-// Import the marked library
-const marked = require('marked');
-
 document.addEventListener("DOMContentLoaded", function () {
     const toc = document.getElementById("toc");
     const chapterContent = document.getElementById("chapter-content");
