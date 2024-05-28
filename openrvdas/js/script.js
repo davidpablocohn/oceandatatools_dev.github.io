@@ -3,6 +3,7 @@ const markdownFiles = ['quickstart.md', 'quickstart_gui.md', 'intro_to_loggers.m
 
 // Function to load a Markdown file and display its content
 function loadMarkdown(file) {
+  console.log('Loading MD file ' + file)
   fetch(file)
     .then(response => response.text())
     .then(markdown => {
