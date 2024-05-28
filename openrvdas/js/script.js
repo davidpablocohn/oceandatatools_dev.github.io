@@ -1,47 +1,57 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const toc = document.getElementById("toc");
-    const chapterContent = document.getElementById("chapter-content");
+// Sample list of markdown files (replace these with your actual filenames)
+const markdownFiles = ['quickstart.md', 'quickstart_gui.md', 'intro_to_loggers.md'];
 
-    const chapters = [
-        { title: "Quickstart", file: "quickstart.md" },
-        { title: "GUI Quickstart", file: "quickstart_gui.md" },
-        { title: "Introduction to Loggers", file: "intro_to_loggers.md" },
-        // Add more chapters as needed
-    ];
+// Function to load a Markdown file and display its content
+function loadMarkdown(file) {
+  fetch(file)
+    .then(response => response.text())
+    .then(markdown => {
+      const htmlContent = marked(markdown);
+      document.getElementById('mainPane').innerHTML = htmlContent;
+      updateSidebar(file);
+      addLinkListeners();
+    });
+}
 
-    // Populate TOC
-    chapters.forEach((chapter, index) => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = "#";
-        a.textContent = chapter.title;
-        a.addEventListener("click", (e) => {
-            e.preventDefault();
-            loadChapter(chapter.file);
-        });
-        li.appendChild(a);
-        toc.appendChild(li);
+// Function to update the sidebar
+function updateSidebar(activeFile) {
+  const fileList = document.getElementById('fileList');
+  fileList.innerHTML = '';
+
+  markdownFiles.forEach(file => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = file.replace('.md', '');
+    link.dataset.file = file;
+
+    if (file === activeFile) {
+      link.classList.add('active');
+    }
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      loadMarkdown(file);
     });
 
-    // Load chapter content
-    function loadChapter(file) {
-        console.log("Loading file '" + file + "'");
-        file = file.replace(/\.md$/, '.html');
-        console.log("Really file '" + file + "'");
-        fetch(file)
-            .then((response) => response.text())
-            .then((text) => {
-                chapterContent.innerHTML = text;
-                //chapterContent.innerHTML = marked(text);
-            })
-            .catch((error) => {
-                chapterContent.innerHTML = "<p>Error loading chapter.</p>";
-                console.error(error);
-            });
-    }
+    listItem.appendChild(link);
+    fileList.appendChild(listItem);
+  });
+}
 
-    // Load the first chapter by default
-    if (chapters.length > 0) {
-        loadChapter(chapters[0].file);
-    }
-});
+// Function to add click listeners to links within the main pane
+function addLinkListeners() {
+  const links = document.querySelectorAll('#mainPane a');
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const href = event.target.getAttribute('href');
+      if (href && href.endsWith('.md')) {
+        event.preventDefault();
+        loadMarkdown(href);
+      }
+    });
+  });
+}
+
+// Initial load
+loadMarkdown(markdownFiles[0]);
