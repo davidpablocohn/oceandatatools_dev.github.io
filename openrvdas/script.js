@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load chapter content
     function loadChapter(file) {
         console.log("Loading file '" + file + "'")
-        fetch(file)
+        fetch(file.replace(/\.md$/, '.html');)
             .then((response) => response.text())
             .then((text) => {
-                chapterContent.innerHTML = marked(text);
+                chapterContent.innerHTML = text;
+                //chapterContent.innerHTML = marked(text);
             })
             .catch((error) => {
                 chapterContent.innerHTML = "<p>Error loading chapter.</p>";
