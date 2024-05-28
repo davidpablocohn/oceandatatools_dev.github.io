@@ -8,10 +8,13 @@ const markdownFiles = [
 const parsedFiles = {};
 
 markdownFiles.forEach(file => {
-  fetch('md/' + file)
+  var html_file = 'md/' + file.replace(/\.md$/, '.html');
+  console.log('Fetching ' + html_file);
+  fetch(html_file)
     .then(response => response.text())
     .then(content => {
-      parsedFiles[file] = window.marked(content);
+      // parsedFiles[file] = window.marked(content);
+      parsedFiles[file] = content;
       populateSidebar(file);
     });
 });
