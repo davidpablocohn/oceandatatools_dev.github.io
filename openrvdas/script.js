@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const chapterContent = document.getElementById("chapter-content");
 
     const chapters = [
-        { title: "Quickstart", file: "quickstart.html" },
-        { title: "GUI Quickstart", file: "quickstart_gui.html" },
-        { title: "Introduction to Loggers", file: "intro_to_loggers.html" },
+        { title: "Quickstart", file: "./quickstart.html" },
+        { title: "GUI Quickstart", file: "./quickstart_gui.html" },
+        { title: "Introduction to Loggers", file: "./intro_to_loggers.html" },
         // Add more chapters as needed
     ];
 
